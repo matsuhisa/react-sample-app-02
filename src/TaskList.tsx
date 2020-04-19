@@ -14,7 +14,7 @@ class TaskList extends Component<TaskListProps> {
       <>
         <h1>{name}の一覧</h1>
         {tasks.map(task => (
-          <div className={'todo-task'}>
+          <div className={'todo-task'} key={task.id}>
             <div>{task.id}</div>
             <div>{task.subject}</div>
             <div>{task.description}</div>
