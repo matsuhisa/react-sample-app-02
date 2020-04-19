@@ -1,10 +1,5 @@
 import React, { Component } from 'react'
-
-export interface Task {
-  id: number
-  subject: string
-  description: string
-}
+import { Task } from './ToDoTask'
 
 interface TaskListProps {
   name: string
@@ -18,15 +13,13 @@ class TaskList extends Component<TaskListProps> {
     return(
       <>
         <h1>{name}の一覧</h1>
-        <div>
-          {tasks.map(task => (
-            <>
-              <div>{task.id}</div>
-              <div>{task.subject}</div>
-              <div>{task.description}</div>
-            </>
-          ))}
-        </div>
+        {tasks.map(task => (
+          <div className={'todo-task'}>
+            <div>{task.id}</div>
+            <div>{task.subject}</div>
+            <div>{task.description}</div>
+          </div>
+        ))}
       </>
     )
   }

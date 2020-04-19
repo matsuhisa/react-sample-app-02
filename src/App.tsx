@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import TaskList, { Task } from './TaskList'
+import TaskList from './TaskList'
+import { Task } from './ToDoTask'
 
 class App extends Component {
   render() {
