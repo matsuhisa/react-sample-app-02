@@ -1,29 +1,27 @@
-import React, { Component } from 'react'
+import React, { FC } from 'react'
 import TaskList from './TaskList'
 import { Task } from './ToDoTask'
 
-class App extends Component {
-  render() {
-    const name: string = 'タスク'
-    const tasks: Task[] = [
-      {
-        id: 1,
-        subject: 'タイトル1',
-        description: 'タスクについて'
-      },
-      {
-        id: 2,
-        subject: 'タイトル2',
-        description: 'タスクについて'
-      },
-    ]
+const App: FC<{}> = () => {
+  const name: string = 'リスト'
+  const tasks: Task[] = [
+    {
+      id: 1,
+      subject: 'タイトル',
+      description: 'ようやく',
+    },
+    {
+      id: 2,
+      subject: 'タイトル123',
+      description: 'ようやく',
+    },
+  ]
 
-    return (
-      <div>
-        <TaskList name={name} tasks={tasks}></TaskList>
-      </div>
-    );
-  }
+  return(
+    <div>
+      <TaskList name={name} tasks={tasks}></TaskList>
+    </div>
+  )
 }
 
 export default App;
