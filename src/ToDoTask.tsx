@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { FC } from 'react'
 
 export interface Task {
   id: number
@@ -10,19 +10,13 @@ interface TaskProps {
   task: Task
 }
 
-class ToDoTask extends Component<TaskProps> {
-  render() {
-    const { task } = this.props
-
-    return(
-      <>
-        <div className={'task'}>
-          <div>{task.id}</div>
-          <div>{task.subject}</div>
-        </div>
-      </>
-    )
-  }
-}
+const ToDoTask: FC<TaskProps> = ({ task }) => (
+  <>
+    <div className={'task'}>
+      <div>{task.id}</div>
+      <div>{task.subject}</div>
+    </div>
+  </>
+)
 
 export default ToDoTask
