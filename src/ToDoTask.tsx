@@ -15,6 +15,7 @@ const ToDoTask: FC<TaskProps> = ({ task }) => (
     <div className={'task'}>
       <div>{task.id}</div>
       <div>{task.subject}</div>
+      <div>{task.description}</div>
     </div>
   </>
 )

@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { Task } from './ToDoTask'
+import ToDoTask, { Task } from './ToDoTask'
 
 interface TaskListProps {
   name: string
@@ -12,10 +12,8 @@ const TaskList: FC<TaskListProps> = ({
   <>
     <h1>{name}の一覧</h1>
     {tasks.map(task => (
-      <div className={'todo-task'} key={task.id}>
-        <div>{task.id}</div>
-        <div>{task.subject}</div>
-        <div>{task.description}</div>
+      <div key={task.id}>
+        <ToDoTask task={task}></ToDoTask>
       </div>
     ))}
   </>
