@@ -1,5 +1,5 @@
 import React from 'react'
-import { action } from '@storybook/addon-actions'
+// import { action } from '@storybook/addon-actions'
 
 import ToDoTask, { Task } from '../ToDoTask'
 
@@ -10,7 +10,7 @@ export default {
   excludeStories: /.*Data$/,
 }
 
-export const Task1 = () => {
+export const Default = () => {
   const task: Task = { id: 1, subject: 'foo', description: 'bar' }
 
   return (
