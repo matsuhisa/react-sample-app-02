@@ -10,13 +10,10 @@ export default {
   excludeStories: /.*Data$/,
 }
 
-export const Default = () => {
-  const task: Task = { id: 1, subject: 'foo', description: 'bar' }
-
-  return (
-    <>
-      <ToDoTask task={task}></ToDoTask>
-    </>
-  )
-
+export const TaskData = {
+  id: 1, 
+  subject: 'サブジェクトです',
+  description: 'ようやくです'
 }
+
+export const Default = () => (<ToDoTask task={TaskData}></ToDoTask>)
