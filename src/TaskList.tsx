@@ -12,9 +12,7 @@ const TaskList: FC<TaskListProps> = ({
   <>
     <h1>{name}の一覧</h1>
     {tasks.map(task => (
-      <div key={task.id}>
-        <ToDoTask task={task}></ToDoTask>
-      </div>
+      <ToDoTask task={task} key={task.id}></ToDoTask>
     ))}
   </>
 )
