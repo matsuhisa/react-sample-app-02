@@ -1,6 +1,7 @@
 import React, { FC } from 'react'
 
-import './Task.css'
+import styled from 'styled-components'
+// import './Task.css'
 
 export interface Task {
   id: number
@@ -13,11 +14,24 @@ interface TaskProps {
 }
 
 const ToDoTask: FC<TaskProps> = ({ task }) => (
-  <div className={'Task'}>
+  <Task className={'Task'}>
     <div>{task.id}</div>
     <div>{task.subject}</div>
     <div>{task.description}</div>
-  </div>
+  </Task>
 )
+
+const Task = styled.div`
+  border: 1px solid red;
+  padding: .4em;
+
+  &:hover {
+    background-color: blue;
+  }
+
+  & + & {
+    margin-top: 2em;
+  }
+`
 
 export default ToDoTask
